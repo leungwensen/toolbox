@@ -1,0 +1,27 @@
+" 3.8.1 (created: 2013/11/21 23:49:14)
+" vim: set ft=vimperator:
+
+
+source! /Users/liangwensen/.vimperatorrc.local
+
+
+map <BS>  <A-Left>
+map <C-c> :echo Yank!<CR>Y
+map <C-h> gT
+map <C-l> gt
+map <C-r> :source ~/.vimperatorrc<CR>
+map ;     :
+
+
+set ignorecase
+set titlestring= 
+set defsearch=google
+set hintchars=hjklasdfgyuiopwertnmzxcvb
+set newtab=all
+set popups=tab
+
+
+hi Hint font: normal 1.2em Courier; text-transform: uppercase; display: inline; z-index: 10000; padding: 0.1em; text-align: center; white-space: nowrap; vertical-align: baseline; background-color: rgb(217, 83, 79); color: rgb(255, 255, 255);
+
+
+echo "### ~/.vimperatorrc loaded ###"

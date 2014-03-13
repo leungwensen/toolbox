@@ -1,0 +1,31 @@
+#!/bin/bash
+# Written by Rishabh Mishra. Released to the public domain.
+# USAGE:
+# Run the following command:
+#     git-high-score <location of your git repository>
+# to get the number of lines each author has touched most recently
+# in the latest revision of the current repository.
+
+# Always check that we received a valid input repository
+
+git --git-dir="./.git" log > /dev/null 2> /dev/null
+if [ $? -eq 128 ]
+then
+    echo "Not a git repository!"
+    exit 128
+else
+    echo -e "Lines  | Name\nChanged|"
+    # Get the files that are in the repository
+    git --work-tree="./" --git-dir="./.git" ls-files -z |\
+    # Iterate over each file, finding the last person to have modified
+    # each line in the file and what the line is
+    xargs -0n1 git --work-tree="./" --git-dir="./.git" blame -C -M  -w |\
+    # Separate their name from the other info; strip trailing whitespace
+    cut -d'(' -f2 |\
+    cut -d2 -f1 |\
+    sed -e "s/ \{1,\}$//" |\
+    # Sort and tabulate the list of duplicate names
+    sort |\
+    uniq -c |\
+    sort -nr
+fi

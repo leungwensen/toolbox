@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+
+for software in ctags git mysql mysql-devel vim
+do
+    if hash $software 2>/dev/null; then
+        echo $software founded
+    else
+        sudo yum install $software
+    fi
+done
+
+if hash nginx 2>/dev/null; then
+    echo nginx founded
+else
+    # install nginx
+    sudo rpm -Uvh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm
+    sudo yum install nginx
+    chkconfig nginx on
+fi
+if hash tmux 2>/dev/null; then
+    echo tmux founded
+else
+    sudo yum install libevent libevent-devel
+    # install tmux
+    sudo rpm -Uvh http://pkgs.repoforge.org/tmux/tmux-1.6-1.el6.rf.x86_64.rpm
+    sudo yum install tmux
+fi
+
+# ---- vim self defination begin
+if [ -e ~/.vim/bundle ]; then
+    cd ~/.vim/bundle/vundle
+    git checkout master
+    git pull
+else
+    mkdir -p ~/.vim/bundle
+    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+fi
+if [ -e ~/.vim/bundle/vim-colors-solarized ]; then
+    cd ~/.vim/bundle/vim-colors-solarized
+    git checkout master
+    git pull
+else
+    cd ~/.vim/bundle
+    git clone git://github.com/altercation/vim-colors-solarized.git
+fi
+if [ ! -e ~/.vim/colors ]; then
+    mkdir ~/.vim/colors
+fi
+if [ ! -e ~/.vim/colors/solarized.vim ]; then
+    cp ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
+fi
+if [ ! -e /temp/vimtmp ]; then
+    mkdir -p ~/temp/vimtmp
+fi
+# ---- vim self defination end
+
+# ---- dotfile and script from note repo begin
+if [ -e ~/note ]; then
+    cd ~/note
+    git checkout master
+    git pull
+else
+    git clone git@bitbucket.org:leungwensen/note.git ~/note
+fi
+for dotfile in `ls ~/note/dotfile`
+do
+    if [[ $dotfile != '.' && $dotfile != '..' ]]; then
+        if [ -e ~/$dotfile ]; then
+            rm ~/$dotfile
+        fi
+        ln -s ~/note/dotfile/$dotfile ~/$dotfile
+    fi
+done
+if [ ! -e ~/script ]; then
+    ln -s ~/note/script ~/script
+fi
+# ---- dotfile and script from note repo begin
+
+

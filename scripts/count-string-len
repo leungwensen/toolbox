@@ -1,0 +1,5 @@
+#!/bin/bash
+echo -e "input a string: \c"
+read INPUT_STRING
+echo -e "string: \n$INPUT_STRING \nlength:\n"
+echo $INPUT_STRING | wc -c

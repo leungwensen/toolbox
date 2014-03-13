@@ -1,0 +1,15 @@
+#!/usr/bin/env perl
+use strict;
+use utf8;
+use warnings;
+
+my ($len) = @ARGV;
+
+my @chars = ('a'..'z', 'A'..'Z', '0'..'9', '_', '-');
+my $result;
+
+foreach (1..$len) {
+    $result .= $chars[rand @chars];
+}
+
+print $result."\n";

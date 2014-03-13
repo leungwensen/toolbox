@@ -1,0 +1,8 @@
+
+git branch -D      \
+    ` git branch   \
+        | awk  '{  \
+                    if ($0 !~ /develop|development|dev|staging|stage|stg|master/) printf "%s", $0 \
+                }' \
+    `
+
