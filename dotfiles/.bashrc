@@ -1,35 +1,42 @@
 
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export CLOUDENGINE_HOME=/usr/local/cloudengine/cloudengine-3.1.7
+export CLOUDENGINE_PATH=$CLOUDENGINE_HOME/bin
+export EDITOR="vim"
 export GOPATH=$HOME/gorepo
+export M2_HOME=/usr/local/apache-maven/apache-maven-3.0.5
+export M2=$M2_HOME/bin
+export NODE_PATH=/usr/local/lib/node_modules
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-PATH=$PATH:/usr/local/mysql/bin
-PATH=$PATH:/usr/local/pgsql/bin
-# PATH=$PATH:/usr/local/php5/bin
 
-PATH=$PATH:/usr/local/share/npm/bin
+pathdirs=(
+    "/usr/local/mysql/bin"
+    "/usr/local/pgsql/bin"
+    "/usr/local/share/npm/bin"
+    $CLOUDENGINE_PATH
+    $M2
+    "$HOME/.cabal/bin"
+    "$HOME/.rvm/bin"
+    "$HOME/java/play-2.1.1"
+    "$HOME/perl5/lib"
+    "$HOME/script"
+)
+for dir in $pathdirs
+do
+    [[ -d $dir ]] && PATH=$PATH:$dir
+done
 
-PATH=$PATH:$HOME/.cabal/bin
-PATH=$PATH:$HOME/perl5/lib
-# Add RVM to PATH for scripting
-PATH=$PATH:$HOME/.rvm/bin
 
-PATH=$PATH:$HOME/java/play-2.1.1
+sources=(
+    "$HOME/.git-completion.bash"
+    "$HOME/.travis/travis.sh"
+    "$HOME/.aliases"
+    "$HOME/.rvm/scripts/rvm"
+    "$HOME/.pythonbrew/etc/bashrc"
+    "$HOME/perl5/perlbrew/etc/bashrc"
+)
+for src in sources
+do
+    [[ -s $src ]] && source $src
+done
 
-# self define scripts
-PATH=$PATH:$HOME/script
-
-source $HOME/.git-completion.bash
-source $HOME/perl5/perlbrew/etc/bashrc
-
-[[ -r $HOME/.aliases ]] && source $HOME/.aliases
-
-# Load RVM into a shell session *as a function*
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
-[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
-
-EDITOR='vim'
-export EDITOR
-
-# added by travis gem
-source /Users/liangwensen/.travis/travis.sh

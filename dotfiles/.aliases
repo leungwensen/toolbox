@@ -12,6 +12,7 @@ alias gs="git push"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias ..="cd .."
+alias ...="cd .. && cd .."
 
 # shortcut
 alias g="git"
