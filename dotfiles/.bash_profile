@@ -1,13 +1,13 @@
 
 sources=(
-    "$HOME/.bashrc"
-    "$HOME/.spm_completion"
+    $HOME/.bashrc
 )
-for src in sources
-do
-    [[ -f $src ]] && . $src
+for src in ${sources[@]}; do
+    if [ -s $src ]; then
+        # echo $src
+        . $src
+    fi
 done
 
-
-echo "rc file successfully loaded!"
+echo 'bash profile loaded'
 
