@@ -15,7 +15,8 @@ map ;     :
 
 set ignorecase
 set titlestring= 
-set defsearch=google
+" set defsearch=bing
+" set defsearch=google
 set hintchars=hjklasdfgyuiopwertnmzxcvb
 set newtab=all
 set popups=tab
