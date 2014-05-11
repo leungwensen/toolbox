@@ -7,7 +7,7 @@ fi
 mkdir $HOME/repo
 cd $HOME/repo
 
-git checkout git@github.com:leungwensen/toolbox.git
+git clone git@github.com:leungwensen/toolbox.git
 
 cd $HOME
 
