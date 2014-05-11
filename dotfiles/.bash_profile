@@ -1,8 +1,5 @@
 
-sources=(
-    $HOME/.bashrc
-)
-for src in ${sources[@]}; do
+for src in $HOME/.bash_profile.d/*; do
     if [ -s $src ]; then
         # echo $src
         . $src

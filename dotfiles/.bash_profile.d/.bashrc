@@ -29,8 +29,6 @@ done
 
 
 sources=(
-    $HOME/.aliases
-    $HOME/.git-completion.bash
     $HOME/.pythonbrew/etc/bashrc
     $HOME/.rvm/scripts/rvm
     $HOME/.spm_completion
@@ -44,3 +42,5 @@ for src in ${sources[@]}; do
     fi
 done
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

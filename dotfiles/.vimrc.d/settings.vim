@@ -40,13 +40,13 @@
     set shiftwidth=4
     set smartindent
     set tabstop=4
-    set tw=79
+"     set tw=79
     set wildignore+=*/tmp/*,*.so,*.sw*,*.zip,*.unity3d
 " }
 
 " syntax {
     if has("syntax")
-      syntax on
+        syntax on
     endif
     if &t_Co > 2 || has("gui_running")
         syntax on

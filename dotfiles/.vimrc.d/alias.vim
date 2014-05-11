@@ -9,15 +9,14 @@ cabbrev f2jn set filetype=json
 cabbrev f2js set filetype=javascript
 
 cabbrev dl   %s/\n\{3,\}/\r\r/e
-cabbrev dr   %s/$//g
+cabbrev dbk  %s/$//g
 cabbrev ds   %s/\s\+$//
 cabbrev t2s  %ret! 4
 
 cabbrev date r !date
 cabbrev w!!  w !sudo tee %
 
-cabbrev ack  Ack
-cabbrev al   Align
+cabbrev so   source ~/.vimrc
 
 cabbrev escape :call leungwensen:HtmlEscape()<CR>
 
