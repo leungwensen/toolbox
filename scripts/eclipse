@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/Applications/eclipse/Eclipse.app/Contents/MacOS/eclipse ; exit;
+
