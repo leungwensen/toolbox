@@ -1,5 +1,6 @@
 
 au BufNewFile,BufRead *.coffee setfiletype js
+au BufNewFile,BufRead *.ejs    setfiletype html
 au BufNewFile,BufRead *.less   setfiletype css
 au BufNewFile,BufRead *.md     setfiletype markdown
 au BufNewFile,BufRead *.mt     setfiletype html
