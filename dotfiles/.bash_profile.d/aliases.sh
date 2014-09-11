@@ -23,8 +23,8 @@ alias vi="vim"
 alias cp="cp -R"
 alias mv="mv -i"
 alias ls="ls -lhaG"
-alias javac="javac -J-Dfile.encoding=UTF-8 -encoding UTF-8"
-alias java="java -Dfile.encoding=UTF-8"
+# alias javac="javac -J-Dfile.encoding=UTF-8 -encoding UTF-8"
+# alias java="java -Dfile.encoding=UTF-8"
 
 # crontab
 alias crontab="VIM_CRONTAB=true crontab"

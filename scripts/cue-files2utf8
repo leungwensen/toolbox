@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-for f in **/*.cue; do
+for f in ./*.cue; do
     mv "$f" "$f.tmp";
     iconv -f gb2312 -t utf-8 -c "$f.tmp" > "$f";
     rm "$f.tmp";

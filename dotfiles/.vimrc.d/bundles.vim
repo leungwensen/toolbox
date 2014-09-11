@@ -51,7 +51,7 @@ Bundle 'plasticboy/vim-markdown'
 " Syntastic {
     Bundle 'Syntastic'
     let g:syntastic_javascript_checkers = [
-      \ 'jslint'
+      \ 'jshint'
       \ ]
 " }
 

@@ -7,6 +7,7 @@ export M2_HOME=/usr/local/apache-maven/apache-maven-3.0.5
 export M2=$M2_HOME/bin
 export NODE_PATH=/usr/local/lib/node_modules
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 
 pathdirs=(
     /usr/local/mysql/bin

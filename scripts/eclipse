@@ -1,4 +1,4 @@
 #!/bin/bash
 
-/Applications/eclipse/Eclipse.app/Contents/MacOS/eclipse ; exit;
+open /Applications/eclipse/Eclipse.app
 
