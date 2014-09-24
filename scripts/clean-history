@@ -1,2 +1,3 @@
 echo > ~/.bash_history
+echo > ~/.zsh_history
 echo > ~/.histfile

@@ -4,7 +4,6 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 filetype off
 call vundle#rc()
 
-Bundle 'AutoClose'
 Bundle 'EasyGrep'
 Bundle 'EasyMotion'
 Bundle 'tComment'
