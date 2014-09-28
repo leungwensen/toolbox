@@ -18,14 +18,14 @@ cabbrev w!!  w !sudo tee %
 
 cabbrev so   source ~/.vimrc
 
-cabbrev escape :call leungwensen:HtmlEscape()<CR>
-
-if !exists("*leungwensen:HtmlEscape")
-    function leungwensen:HtmlEscape()
+if !exists("*Leungwensen_HtmlEscape")
+    function Leungwensen_HtmlEscape()
         silent s/&/\&amp;/eg
         silent s/"/\&quot;/eg
         silent s/</\&lt;/eg
         silent s/>/\&gt;/eg
     endfunction
 endif
+cabbrev escape :call Leungwensen_HtmlEscape()<CR>
+
 

@@ -14,6 +14,7 @@ Bundle 'ZenCoding.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'gorodinskiy/vim-coloresque'
 
 " NerdTree {
     Bundle 'scrooloose/nerdtree'
