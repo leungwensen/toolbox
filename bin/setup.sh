@@ -19,7 +19,7 @@
 
         mkdir $HOME/repo
         cd $HOME/repo
-        git clone git@github.com:leungwensen/toolbox.git
+        git clone https://github.com/leungwensen/toolbox.git
     # }
     # link files {
         cd $HOME
