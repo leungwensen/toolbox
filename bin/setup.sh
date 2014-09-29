@@ -1,27 +1,43 @@
 #!/usr/bin/env bash
 
-if [ -e $HOME/repo/toolbox ]; then
-    rm -rf $HOME/repo/toolbox
-fi
+# homebrew {
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# }
+# oh my zsh {
+    curl -L http://install.ohmyz.sh | sh
+# }
+# apps {
+    brew install vim
+    brew install node
+    brew install git
+# }
+# toolbox {
+    # get the source {
+        if [ -e $HOME/repo/toolbox ]; then
+            rm -rf $HOME/repo/toolbox
+        fi
 
-mkdir $HOME/repo
-cd $HOME/repo
-
-git clone git@github.com:leungwensen/toolbox.git
-
-cd $HOME
-
-ln -s $HOME/repo/toolbox/scripts scripts
-
-ln -s $HOME/repo/toolbox/dotfiles/.vimrc   .vimrc
-ln -s $HOME/repo/toolbox/dotfiles/.vimrc.d .vimrc.d
-
-ln -s $HOME/repo/toolbox/dotfiles/.bash_profile   .bash_profile
-ln -s $HOME/repo/toolbox/dotfiles/.bash_profile.d .bash_profile.d
-
-ln -s $HOME/repo/toolbox/dotfiles/.vimperatorrc .vimperatorrc
-
-ln -s $HOME/repo/toolbox/dotfiles/.gitignore .gitignore
-
-source $HOME/.bash_profile
+        mkdir $HOME/repo
+        cd $HOME/repo
+        git clone git@github.com:leungwensen/toolbox.git
+    # }
+    # link files {
+        cd $HOME
+        ln -s $HOME/repo/toolbox/scripts scripts # self defined scripts
+        links=(
+            .vimrc
+            .vimrc.d
+            .bash_profile
+            .bash_profile.d
+            .vimperatorrc
+            .gitignore
+        )
+        for link in ${links[@]}; do
+            ln -s $HOME/repo/toolbox/dotfiles/$link $link
+        done
+    # }
+    # make the magic happen {
+        source $HOME/.bash_profile
+    # }
+# }
 
