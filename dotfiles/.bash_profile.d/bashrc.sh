@@ -35,6 +35,7 @@ for dir in ${pathdirs[@]}; do
 done
 
 sources=(
+    $HOME/.nvm/nvm.sh
     $HOME/.pythonbrew/etc/bashrc
     $HOME/.rvm/scripts/rvm
     $HOME/.spm_completion

@@ -57,4 +57,7 @@
     filetype plugin indent on
     syntax on
 " }
+" bash shell // for Yosemite {
+    set shell=bash\ -l
+" }
 
