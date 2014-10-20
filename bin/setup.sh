@@ -7,13 +7,13 @@
         echo 'brew founded';
     fi
 # }
-# oh my zsh {
-    if ! [ -e ~/.oh-my-zsh ]; then
-        curl -L http://install.ohmyz.sh | sh
-    else
-        echo 'oh-my-zsh founded';
-    fi
-# }
+# # oh my zsh {
+#     if ! [ -e ~/.oh-my-zsh ]; then
+#         curl -L http://install.ohmyz.sh | sh
+#     else
+#         echo 'oh-my-zsh founded';
+#     fi
+# # }
 # apps {
     apps=(
         git
@@ -34,8 +34,8 @@
 # }
 # languages {
     # nodejs {
-        NVM_VERSION=v0.17.2
-        NODE_VERSION=0.10
+        # NVM_VERSION=v0.17.2
+        NODE_VERSION=0.11
         if ! hash nvm 2>/dev/null; then
             git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
             source ~/.nvm/nvm.sh

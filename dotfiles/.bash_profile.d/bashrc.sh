@@ -8,7 +8,7 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 export M2=$M2_HOME/bin
 export M2_HOME=/usr/local/apache-maven/apache-maven-3.0.5
 export NODE_PATH=/usr/local/lib/node_modules
-export SHELL=zsh
+# export SHELL=bash
 
 LOCAL=/usr/local
 pathdirs=(
@@ -36,16 +36,15 @@ done
 
 sources=(
     $HOME/.nvm/nvm.sh
-    $HOME/.pythonbrew/etc/bashrc
     $HOME/.rvm/scripts/rvm
-    $HOME/.spm_completion
-    $HOME/.travis/travis.sh
     $HOME/perl5/perlbrew/etc/bashrc
 )
 for src in ${sources[@]}; do
     if [ -s $src ]; then
         # echo $src
-        . $src
+        source $src
+    else
+        echo $src not found
     fi
 done
 
