@@ -104,9 +104,8 @@
 # get repos {
     REPO_DIR=$HOME/repo
     GITHUB_HOST=https://github.com
-    ALIBABA_GITLAB_HOST=http://gitlab.alibaba-inc.com
+    # ALIBABA_GITLAB_HOST=http://gitlab.alibaba-inc.com
     repos=(
-        $ALIBABA_GITLAB_HOST/wensen.lws/chicken.git
         $GITHUB_HOST/altercation/ethanschoonover.com.git
         $GITHUB_HOST/leungwensen/js-projects.git
         $GITHUB_HOST/leungwensen/lab.git

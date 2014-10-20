@@ -2,6 +2,7 @@
 export CLOUDENGINE_HOME=/usr/local/cloudengine/cloudengine-3.1.7
 export CLOUDENGINE_PATH=$CLOUDENGINE_HOME/bin
 export EDITOR=vim
+export GOROOT=/usr/local/Cellar/go/1.3.2
 export GOPATH=$HOME/gorepo
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 export M2=$M2_HOME/bin
@@ -23,6 +24,7 @@ pathdirs=(
     $LOCAL/pgsql/bin
     $LOCAL/sbin
     $LOCAL/share/npm/bin
+    $GOROOT/bin
     $M2
 )
 for dir in ${pathdirs[@]}; do

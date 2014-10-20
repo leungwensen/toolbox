@@ -8,14 +8,12 @@
         set background=dark
     endif
 " }
-
 " language & encoding {
     language message zh_CN.UTF-8
     set langmenu=zh_CN.UTF-8
     set encoding=utf-8
     set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 " }
-
 " backup {
     set history=1000
     if $VIM_CRONTAB == "true"
@@ -23,7 +21,6 @@
         set nowritebackup
     endif
 " }
-
 " editting {
     let mapleader = ","
     let g:mapleader = ","
@@ -43,7 +40,6 @@
 "     set tw=79
     set wildignore+=*/tmp/*,*.so,*.sw*,*.zip,*.unity3d
 " }
-
 " syntax {
     if has("syntax")
         syntax on
@@ -53,5 +49,12 @@
         set hlsearch
     endif
     syntax enable
+" }
+" highlight {
+    filetype off
+    filetype plugin indent off
+    set runtimepath+=$GOROOT/misc/vim
+    filetype plugin indent on
+    syntax on
 " }
 
