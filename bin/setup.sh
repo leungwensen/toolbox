@@ -141,6 +141,7 @@
                 .bash_profile.d
                 .gitconfig
                 .gitignore
+                .tmux.conf
                 .vimperatorrc
                 .vimrc
                 .vimrc.d
