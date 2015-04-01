@@ -3,10 +3,7 @@
     set number
     set ruler
     set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
-    if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
-        colorscheme solarized
-        set background=dark
-    endif
+    colorscheme desert
 " }
 " language & encoding {
     language message zh_CN.UTF-8
@@ -37,7 +34,7 @@
     set shiftwidth=4
     set smartindent
     set tabstop=4
-"     set tw=79
+    " set tw=79
     set wildignore+=*/tmp/*,*.so,*.sw*,*.zip,*.unity3d
 " }
 " syntax {
@@ -53,7 +50,7 @@
 " highlight {
     filetype off
     filetype plugin indent off
-    set runtimepath+=$GOROOT/misc/vim
+    " set runtimepath+=$GOROOT/misc/vim
     filetype plugin indent on
     syntax on
 " }

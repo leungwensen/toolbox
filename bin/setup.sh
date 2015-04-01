@@ -15,16 +15,17 @@
 #     fi
 # # }
 # apps {
+        # go
+        # mysql
+        # nginx
+        # pyenv
+        # tig
     apps=(
         git
-        go
-        mysql
-        nginx
-        pyenv
         svn
         the_silver_searcher
-        tig
         vim
+	node
     )
     brew update
     for app in ${apps[@]}; do
@@ -35,19 +36,20 @@
 # languages {
     # nodejs {
         # NVM_VERSION=v0.17.2
-        NODE_VERSION=0.11
-        if ! hash nvm 2>/dev/null; then
-            git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
-            source ~/.nvm/nvm.sh
-        else
-            echo 'nvm founded';
-        fi
-        nvm install $NODE_VERSION
-        nvm use     $NODE_VERSION
+        # NODE_VERSION=0.11
+        # if ! hash nvm 2>/dev/null; then
+        #     git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+        #     source ~/.nvm/nvm.sh
+        # else
+        #     echo 'nvm founded';
+        # fi
+        # nvm install $NODE_VERSION
+        # nvm use     $NODE_VERSION
+	# brew install node
         # global node modules {
+                # gulp
             node_modules=(
                 grunt-cli
-                gulp
                 jshint
                 less
                 uglify-js
@@ -74,66 +76,66 @@
         # }
     # }
     # python {
-        PYTHON2VERSION=2.7.6
-        PYTHON3VERSION=3.3.3
-        pyenv install $PYTHON2VERSION
-        pyenv install $PYTHON3VERSION
-        pyenv global  $PYTHON3VERSION $PYTHON2VERSION
+        # PYTHON2VERSION=2.7.6
+        # PYTHON3VERSION=3.3.3
+        # pyenv install $PYTHON2VERSION
+        # pyenv install $PYTHON3VERSION
+        # pyenv global  $PYTHON3VERSION $PYTHON2VERSION
     # }
     # ruby {
-        RUBY_VERSION=2.1.3
-        if ! hash rvm 2>/dev/null; then
-            curl -L https://get.rvm.io | bash -s stable --autolibs=enabled --ruby --rails
-        else
-            echo 'rvm founded';
-        fi
-        rvm install $RUBY_VERSION
-        rvm use     $RUBY_VERSION
+        # RUBY_VERSION=2.1.3
+        # if ! hash rvm 2>/dev/null; then
+        #     curl -L https://get.rvm.io | bash -s stable --autolibs=enabled --ruby --rails
+        # else
+        #     echo 'rvm founded';
+        # fi
+        # rvm install $RUBY_VERSION
+        # rvm use     $RUBY_VERSION
         # global gems {
-            ruby_gems=(
-                tmuxinator
-            )
-            for ruby_gem in ${ruby_gems[@]}; do
-                gem install $ruby_gem
-            done
+            # ruby_gems=(
+            #     tmuxinator
+            # )
+            # for ruby_gem in ${ruby_gems[@]}; do
+            #     gem install $ruby_gem
+            # done
         # }
     # }
     # golang {
     # }
 # }
 # get repos {
-    REPO_DIR=$HOME/repo
-    GITHUB_HOST=https://github.com
+    # REPO_DIR=$HOME/repo
+    # GITHUB_HOST=https://github.com
     # ALIBABA_GITLAB_HOST=http://gitlab.alibaba-inc.com
-    repos=(
-        $GITHUB_HOST/altercation/ethanschoonover.com.git
-        $GITHUB_HOST/leungwensen/js-projects.git
-        $GITHUB_HOST/leungwensen/lab.git
-        $GITHUB_HOST/leungwensen/leungwensen.com.git
-        $GITHUB_HOST/leungwensen/pastry.git
-        $GITHUB_HOST/leungwensen/toolbox.git
-        $GITHUB_HOST/xumingming/pyscheduler.git
-    )
-    mkdir $REPO_DIR
-    for repo in ${repos[@]}; do
-        REPO_NAME=$(echo $repo | sed -n -e 's/^.*\/\(.*\)\.git$/\1/p') # name of repo
-        if [ -e $REPO_DIR/$REPO_NAME ]; then
-            cd $REPO_DIR/$REPO_NAME
-            echo "update $REPO_NAME"
-            git pull
-        else
-            cd $REPO_DIR
-            echo "clone $REPO_NAME"
-            git clone $repo $REPO_NAME
-        fi
-    done
+    # repos=(
+        # $GITHUB_HOST/altercation/ethanschoonover.com.git
+        # $GITHUB_HOST/leungwensen/js-projects.git
+        # $GITHUB_HOST/leungwensen/lab.git
+        # $GITHUB_HOST/leungwensen/leungwensen.com.git
+        # $GITHUB_HOST/leungwensen/pastry.git
+        # $GITHUB_HOST/leungwensen/toolbox.git
+        # $GITHUB_HOST/xumingming/pyscheduler.git
+    # )
+    # mkdir $REPO_DIR
+    # for repo in ${repos[@]}; do
+    #     REPO_NAME=$(echo $repo | sed -n -e 's/^.*\/\(.*\)\.git$/\1/p') # name of repo
+    #     if [ -e $REPO_DIR/$REPO_NAME ]; then
+    #         cd $REPO_DIR/$REPO_NAME
+    #         echo "update $REPO_NAME"
+    #         git pull
+    #     else
+    #         cd $REPO_DIR
+    #         echo "clone $REPO_NAME"
+    #         git clone $repo $REPO_NAME
+    #     fi
+    # done
 # }
 # toolbox {
     # link files {
         cd $HOME
         # self defined scripts {
             rm scripts
-            ln -s $HOME/repo/toolbox/scripts scripts # self defined scripts
+            ln -s $HOME/repo/leungwensen/toolbox/scripts scripts # self defined scripts
         # }
         # vimrc, bashrc & others {
             links=(
@@ -148,7 +150,7 @@
             )
             for link in ${links[@]}; do
                 rm $link
-                ln -s $REPO_DIR/toolbox/dotfiles/$link $link
+                ln -s $HOME/repo/leungwensen/toolbox/dotfiles/$link $link
             done
         # }
     # }

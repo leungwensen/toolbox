@@ -4,21 +4,8 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 filetype off
 call vundle#rc()
 
-Bundle 'EasyGrep'
-Bundle 'EasyMotion'
-Bundle 'tComment'
-Bundle 'ctags.vim'
-Bundle 'Emmet.vim'
-Bundle 'fugitive.vim'
 Bundle 'ZenCoding.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'bling/vim-airline'
-Bundle 'plasticboy/vim-markdown'
 Bundle 'gorodinskiy/vim-coloresque'
-
-" NerdTree {
-    Bundle 'scrooloose/nerdtree'
-" }
 
 " package managers {
     Bundle 'pathogen.vim'
@@ -26,15 +13,7 @@ Bundle 'gorodinskiy/vim-coloresque'
 " }
 
 " snipMate {
-    Bundle "MarcWeber/vim-addon-mw-utils"
-    Bundle "tomtom/tlib_vim"
-    Bundle "garbas/vim-snipmate"
     Bundle "honza/vim-snippets"
-" }
-
-" ag.vim {
-    Bundle 'ag.vim'
-    cabbrev ag Ag
 " }
 
 " Align {
