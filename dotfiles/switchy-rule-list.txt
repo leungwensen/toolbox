@@ -1,18 +1,21 @@
-#BEGIN
-[wildcard]
-*://*.blogspot.*/*
-*://*.facebook.com/*
-*://*.twitter.com/*
-*://*.godaddy.com/*
-*://*.google-analytics.*/*
-*://*.google.*/*
-*://*.googleapis.*/*
-*://*.googlecode.*/*
-*://*.googlesource.*/*
-*://*.googlesyndication.*/*
-*://*.googletagservices.*/*
-*://*.googleusercontent.*/*
-*://*.gstatic.*/*
-*://youtu.be/*
-[regexp]
-#END
+[SwitchyOmega Conditions]
+@with result
+
+*://*.facebook.*            +proxy 
+*://*.blogspot.*/*          +proxy 
+*://*.facebook.com/*        +proxy 
+*://*.twitter.com/*         +proxy 
+*://*.godaddy.com/*         +proxy 
+*://*.google-analytics.*/*  +proxy 
+*://*.google.*/*            +proxy 
+*://*.googleapis.*/*        +proxy 
+*://*.googlecode.*/*        +proxy 
+*://*.googlesource.*/*      +proxy 
+*://*.googlesyndication.*/* +proxy 
+*://*.googletagservices.*/* +proxy 
+*://*.googleusercontent.*/* +proxy 
+*://*.gstatic.*/*           +proxy 
+*://youtu.be/*              +proxy 
+
+* +direct
+
