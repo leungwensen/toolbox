@@ -19,6 +19,10 @@ Bundle 'gorodinskiy/vim-coloresque'
     Bundle "honza/vim-snippets"
 " }
 
+" comments {
+    Bundle "scrooloose/nerdcommenter"
+" }
+
 " Align {
     Bundle 'Align'
     cabbrev al Align
@@ -48,6 +52,7 @@ Bundle 'gorodinskiy/vim-coloresque'
 
 filetype on
 filetype plugin indent on
+filetype plugin on
 
 call pathogen#infect()
 
