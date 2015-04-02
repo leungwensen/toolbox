@@ -1,6 +1,6 @@
 #BEGIN
 [wildcard]
-*://*.gitlab.*/*
+*://*.gitlab.com/*
 *://*.blogspot.*/*
 *://*.facebook.com/*
 *://*.twitter.com/*
