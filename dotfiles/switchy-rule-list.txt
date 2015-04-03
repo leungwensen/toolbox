@@ -4,7 +4,7 @@
     *://*.gitlab.com/*
 # }
 # vps services, etc. {
-    *://*.godaddy.com/*
+    *://*.godaddy.*/*
 # }
 # google {
     *://*.blogspot.*/*
@@ -20,9 +20,9 @@
     *://*.gstatic.*/*
 # }
 # SNS, etc {
-    *://*.facebook.com/*
-    *://*.twimg.com/*
-    *://*.twitter.com/*
+    *://*.facebook.*/*
+    *://*.twimg.*/*
+    *://*.twitter.*/*
     *://t.co/*
 # }
 # media {
