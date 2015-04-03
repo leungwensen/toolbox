@@ -23,6 +23,7 @@
     *://*.facebook.com/*
     *://*.twimg.com/*
     *://*.twitter.com/*
+    *://t.co/*
 # }
 # media {
     *://*.youtube.*/*
