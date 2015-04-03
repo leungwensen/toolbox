@@ -7,6 +7,7 @@
 *://*.godaddy.com/*
 *://*.google-analytics.*/*
 *://*.google.*/*
+*://*.gmail.*/*
 *://*.googleapis.*/*
 *://*.googlecode.*/*
 *://*.googlesource.*/*
