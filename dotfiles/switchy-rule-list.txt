@@ -1,20 +1,31 @@
 #BEGIN
 [wildcard]
-*://*.gitlab.com/*
-*://*.blogspot.*/*
-*://*.facebook.com/*
-*://*.twitter.com/*
-*://*.godaddy.com/*
-*://*.google-analytics.*/*
-*://*.google.*/*
-*://*.gmail.*/*
-*://*.googleapis.*/*
-*://*.googlecode.*/*
-*://*.googlesource.*/*
-*://*.googlesyndication.*/*
-*://*.googletagservices.*/*
-*://*.googleusercontent.*/*
-*://*.gstatic.*/*
-*://youtu.be/*
+# version control {
+    *://*.gitlab.com/*
+# }
+# vps services, etc. {
+    *://*.godaddy.com/*
+# }
+# google {
+    *://*.blogspot.*/*
+    *://*.gmail.*/*
+    *://*.google-analytics.*/*
+    *://*.google.*/*
+    *://*.googleapis.*/*
+    *://*.googlecode.*/*
+    *://*.googlesource.*/*
+    *://*.googlesyndication.*/*
+    *://*.googletagservices.*/*
+    *://*.googleusercontent.*/*
+    *://*.gstatic.*/*
+# }
+# SNS, etc {
+    *://*.facebook.com/*
+    *://*.twimg.com/*
+    *://*.twitter.com/*
+# }
+# media {
+    *://*.youtube.*/*
+# }
 [regexp]
 #END
