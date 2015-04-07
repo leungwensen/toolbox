@@ -1,7 +1,12 @@
 #BEGIN
 [wildcard]
 # version control {
-    *://*.gitlab.com/*
+    # bitbucket {
+        *://*.cloudfront.net/*
+    # }
+    # gitlab {
+        *://*.gitlab.com/*
+    # }
 # }
 # vps services, etc. {
     *://*.godaddy.*/*
