@@ -21,15 +21,15 @@ for dir in ${pathdirs[@]}; do
     fi
 done
 
-# sources=(
-#     $HOME/perl5/perlbrew/etc/bashrc
-# )
-# for src in ${sources[@]}; do
-#     if [ -s $src ]; then
-#         # echo $src
-#         source $src
-#     else
-#         echo $src not found
-#     fi
-# done
+sources=(
+    $HOME/perl5/perlbrew/etc/bashrc
+)
+for src in ${sources[@]}; do
+    if [ -s $src ]; then
+        # echo $src
+        source $src
+    else
+        echo $src not found
+    fi
+done
 

@@ -4,7 +4,7 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 filetype off
 call vundle#rc()
 
-Bundle 'ZenCoding.vim'
+Bundle 'Emmet.vim'
 Bundle 'gorodinskiy/vim-coloresque'
 
 " package managers {

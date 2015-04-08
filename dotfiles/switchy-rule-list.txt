@@ -13,16 +13,10 @@
 # }
 # google {
     *://*.blogspot.*/*
-    *://*.gmail.*/*
     *://*.google-analytics.*/*
-    *://*.google.*/*
-    *://*.googleapis.*/*
-    *://*.googlecode.*/*
-    *://*.googlesource.*/*
-    *://*.googlesyndication.*/*
-    *://*.googletagservices.*/*
-    *://*.googleusercontent.*/*
-    *://*.gstatic.*/*
+    *://mail.google.com/*
+    *://plus.google.com/*
+    *://www.google.com/*
 # }
 # SNS, etc {
     *://*.facebook.*/*
