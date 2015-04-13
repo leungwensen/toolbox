@@ -8,4 +8,5 @@ au BufNewFile,BufRead *.psgi   setfiletype perl
 au BufNewFile,BufRead *.thtml  setfiletype xml
 au BufNewFile,BufRead *.tt     setfiletype html
 au BufNewFile,BufRead *.vm     setfiletype html
+au BufNewFile,BufRead *.tex    setfiletype tex
 

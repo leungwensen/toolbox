@@ -1,10 +1,11 @@
-#BEGIN
+BEGIN
 [wildcard]
 # version control {
     # bitbucket {
         *://*.cloudfront.net/*
     # }
     # gitlab {
+        travis-ci-org
         *://*.gitlab.com/*
     # }
 # }
@@ -26,6 +27,9 @@
 # }
 # media {
     *://*.youtube.*/*
+# }
+# avatar {
+    # www.gravatar.com
 # }
 [regexp]
 #END
