@@ -5,7 +5,7 @@ BEGIN
         *://*.cloudfront.net/*
     # }
     # gitlab {
-        travis-ci-org
+        # travis-ci-org
         *://*.gitlab.com/*
     # }
 # }
