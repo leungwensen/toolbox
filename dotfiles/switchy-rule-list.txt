@@ -1,4 +1,4 @@
-BEGIN
+#BEGIN
 [wildcard]
 *://*.cloudfront.net/*
 *://*.gitlab.com/*
