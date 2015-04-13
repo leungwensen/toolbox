@@ -1,35 +1,17 @@
 BEGIN
 [wildcard]
-# version control {
-    # bitbucket {
-        *://*.cloudfront.net/*
-    # }
-    # gitlab {
-        # travis-ci-org
-        *://*.gitlab.com/*
-    # }
-# }
-# vps services, etc. {
-    *://*.godaddy.*/*
-# }
-# google {
-    *://*.blogspot.*/*
-    *://*.google-analytics.*/*
-    *://mail.google.com/*
-    *://plus.google.com/*
-    *://www.google.com/*
-# }
-# SNS, etc {
-    *://*.facebook.*/*
-    *://*.twimg.*/*
-    *://*.twitter.*/*
-    *://t.co/*
-# }
-# media {
-    *://*.youtube.*/*
-# }
-# avatar {
-    # www.gravatar.com
-# }
+*://*.cloudfront.net/*
+*://*.gitlab.com/*
+*://*.godaddy.*/*
+*://*.blogspot.*/*
+*://*.google-analytics.*/*
+*://mail.google.com/*
+*://plus.google.com/*
+*://www.google.com/*
+*://*.facebook.*/*
+*://*.twimg.*/*
+*://*.twitter.*/*
+*://t.co/*
+*://*.youtube.*/*
 [regexp]
 #END
