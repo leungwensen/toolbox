@@ -8,6 +8,7 @@
 *://mail.google.com/*
 *://plus.google.com/*
 *://www.google.com/*
+*://account.google.com/*
 *://*.facebook.*/*
 *://*.twimg.*/*
 *://*.twitter.*/*
