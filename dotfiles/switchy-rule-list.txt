@@ -9,6 +9,7 @@
 *://plus.google.com/*
 *://www.google.com/*
 *://account.google.com/*
+*://*.googlevideo.com/*
 *://*.facebook.*/*
 *://*.twimg.*/*
 *://*.twitter.*/*
