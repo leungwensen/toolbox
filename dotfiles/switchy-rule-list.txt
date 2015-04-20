@@ -10,7 +10,7 @@
 *://www.google.com/*
 *://account.google.com/*
 *://*.googlevideo.com/*
-*://*.googleapi.com/*
+*://*.googleapis.com/*
 *://*.facebook.*/*
 *://*.twimg.*/*
 *://*.twitter.*/*
