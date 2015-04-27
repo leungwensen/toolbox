@@ -3,7 +3,7 @@
 *://*.cloudfront.net/*
 *://*.gitlab.com/*
 *://*.github.com/*
-*://raw.githubusercontent.com/*
+*://*.githubusercontent.com/*
 *://*.godaddy.*/*
 *://*.blogspot.*/*
 *://*.google-analytics.*/*
