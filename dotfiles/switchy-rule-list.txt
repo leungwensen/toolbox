@@ -13,6 +13,7 @@
 *://account.google.com/*
 *://*.googlevideo.com/*
 *://*.googleapis.com/*
+*://*.gstatic.com/*
 *://*.facebook.*/*
 *://*.twimg.*/*
 *://*.twitter.*/*
