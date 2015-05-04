@@ -17,6 +17,7 @@
 *://*.gstatic.com/*
 *://*.facebook.*/*
 *://*.fbcdn.*/*
+*://*.akamaihd.*/*
 *://*.twimg.*/*
 *://*.twitter.*/*
 *://t.co/*
