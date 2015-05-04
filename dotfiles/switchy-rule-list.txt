@@ -16,6 +16,7 @@
 *://*.googleusercontent.com/*
 *://*.gstatic.com/*
 *://*.facebook.*/*
+*://*.fbcdn.*/*
 *://*.twimg.*/*
 *://*.twitter.*/*
 *://t.co/*
