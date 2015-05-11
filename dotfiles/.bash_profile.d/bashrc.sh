@@ -1,6 +1,7 @@
 
 export EDITOR=vim
 export NODE_PATH=/usr/local/lib/node_modules
+export NVM_DIR=~/.nvm
 # export SHELL=bash
 
 LOCAL=/usr/local
@@ -32,4 +33,6 @@ for src in ${sources[@]}; do
         echo $src not found
     fi
 done
+
+source $(brew --prefix nvm)/nvm.sh
 
