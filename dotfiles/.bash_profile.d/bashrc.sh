@@ -1,18 +1,17 @@
 
 export EDITOR=vim
 export NODE_PATH=/usr/local/lib/node_modules
-export NVM_DIR=~/.nvm
+export NVM_DIR=$HOME/.nvm
 # export SHELL=bash
 
 LOCAL=/usr/local
 pathdirs=(
     $CLOUDENGINE_PATH
+    $GOROOT/bin
     $HOME/perl5/lib
     $HOME/scripts
     $LOCAL/bin
     $LOCAL/sbin
-    $LOCAL/share/npm/bin
-    $GOROOT/bin
     $M2
 )
 for dir in ${pathdirs[@]}; do
@@ -34,5 +33,5 @@ for src in ${sources[@]}; do
     fi
 done
 
-source $(brew --prefix nvm)/nvm.sh
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 

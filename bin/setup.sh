@@ -25,7 +25,6 @@
         svn
         the_silver_searcher
         vim
-        nvm
 	node
     )
     brew update

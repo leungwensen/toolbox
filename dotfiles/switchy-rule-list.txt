@@ -18,6 +18,7 @@
 *://*.twimg.*/*
 *://*.twitter.*/*
 *://t.co/*
+*://*.wikipedia.org/*
 *://*.youtube.*/*
 [regexp]
 #END
