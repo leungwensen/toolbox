@@ -2,6 +2,7 @@
 [wildcard]
 *://*.cloudfront.net/*
 *://*.gitlab.com/*
+*://*.appspot.com/*
 *://*.github.com/*
 *://*.githubusercontent.com/*
 *://*.godaddy.*/*

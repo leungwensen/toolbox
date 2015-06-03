@@ -32,16 +32,13 @@ coverage
 
 
 !Build
-/.build
 /.bundle
 /.config
 /.yardoc
 /Build
 /InstalledFiles
-/_build
 /_yardoc
 /blib
-/build
 /cover_db
 /coverage
 /inc
