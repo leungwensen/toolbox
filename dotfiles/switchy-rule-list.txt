@@ -4,6 +4,7 @@
 *://*.gitlab.com/*
 *://*.appspot.com/*
 *://*.github.com/*
+*://*.github.io/*
 *://*.githubusercontent.com/*
 *://*.godaddy.*/*
 *://*.blogspot.*/*
