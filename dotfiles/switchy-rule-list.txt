@@ -1,5 +1,5 @@
 #BEGIN
-#END
+[wildcard]
 *://*.akamaihd.*/*
 *://*.appspot.com/*
 *://*.blogspot.*/*
@@ -25,4 +25,4 @@
 *://*.youtube.*/*
 *://t.co/*
 [regexp]
-[wildcard]
+#END
