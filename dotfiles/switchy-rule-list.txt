@@ -22,6 +22,7 @@
 *://*.twimg.*/*
 *://*.twitter.*/*
 *://*.wikipedia.org/*
+*://*.wp.com/*
 *://*.youtube.*/*
 *://t.co/*
 [regexp]
