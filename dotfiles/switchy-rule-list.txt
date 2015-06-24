@@ -1,6 +1,7 @@
 #BEGIN
 [wildcard]
 *://*.akamaihd.*/*
+*://*.amazonaws.com/*
 *://*.appspot.com/*
 *://*.blogspot.*/*
 *://*.cloudfront.net/*
