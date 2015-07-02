@@ -20,6 +20,7 @@
 *://*.googlevideo.com/*
 *://*.gravatar.com/*
 *://*.gstatic.com/*
+*://*.slideshare.net/*
 *://*.twimg.*/*
 *://*.twitter.*/*
 *://*.wikipedia.org/*
