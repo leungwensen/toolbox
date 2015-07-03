@@ -5,6 +5,7 @@
 *://*.appspot.com/*
 *://*.blogspot.*/*
 *://*.cloudfront.net/*
+*://*.edgefonts.*/*
 *://*.facebook.*/*
 *://*.fastly.*/*
 *://*.fbcdn.*/*
