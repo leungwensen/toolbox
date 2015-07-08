@@ -28,6 +28,7 @@
 *://*.wikipedia.org/*
 *://*.wp.com/*
 *://*.youtube.*/*
+*://ssl.gstatic.com/*
 *://t.co/*
 [regexp]
 #END
