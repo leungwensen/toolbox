@@ -21,14 +21,13 @@
 *://*.googleusercontent.com/*
 *://*.googlevideo.com/*
 *://*.gravatar.com/*
-*://*.gstatic.com/*
+*://*.gstatic.*/*
 *://*.slideshare.net/*
 *://*.twimg.*/*
 *://*.twitter.*/*
 *://*.wikipedia.org/*
 *://*.wp.com/*
 *://*.youtube.*/*
-*://ssl.gstatic.com/*
 *://t.co/*
 [regexp]
 #END
