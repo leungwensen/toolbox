@@ -1,6 +1,7 @@
 
 export EDITOR=vim
-export NODE_PATH=/usr/local/lib/node_modules:/Users/liangwensen/.nvm/versions/io.js/v2.0.1/lib/node_modules
+#export NODE_PATH=/usr/local/lib/node_modules:/Users/liangwensen/.nvm/versions/io.js/v2.0.1/lib/node_modules
+export NODE_PATH=$NODE_PATH:/Users/liangwensen/.nvm/versions/node/v0.12.2/lib/node_modules
 export NVM_DIR=$HOME/.nvm
 # export SHELL=bash
 
@@ -9,6 +10,7 @@ pathdirs=(
     $CLOUDENGINE_PATH
     $GOROOT/bin
     $HOME/perl5/lib
+    $HOME/.cabal/bin
     $HOME/scripts
     $LOCAL/bin
     $LOCAL/sbin

@@ -26,10 +26,7 @@ MANIFEST.bak
 META.json
 META.yml
 MYMETA.*
-Makefile
-Makefile.old
 coverage
-
 
 !Build
 /.bundle

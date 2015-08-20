@@ -16,6 +16,8 @@ cabbrev t2s  %ret! 4
 cabbrev date r !date
 cabbrev w!!  w !sudo tee %
 
+cabbrev xmlformat '<,'>xmllint\ --format\ -
+
 cabbrev so   source ~/.vimrc
 
 if !exists("*Leungwensen_HtmlEscape")

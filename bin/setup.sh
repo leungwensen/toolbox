@@ -25,7 +25,7 @@
         svn
         the_silver_searcher
         vim
-	node
+        node
     )
     brew update
     for app in ${apps[@]}; do
@@ -45,7 +45,7 @@
         # fi
         # nvm install $NODE_VERSION
         # nvm use     $NODE_VERSION
-	# brew install node
+        # brew install node
         # global node modules {
                 # gulp
             node_modules=(
