@@ -1,6 +1,6 @@
 [user]
-    name  = 绝云
-    email = wensen.lws@alibaba-inc.com
+    name  = leungwensen
+    email = leungwensen@gmail.com
 
 [color]
     diff   = auto
@@ -15,6 +15,7 @@
     editor = vim
     pager  = less -R
     excludesfile = ~/.gitignore
+    quotepath = false
 
 [alias]
     diverges = !bash -c 'diff -u <(git rev-list --first-parent "${1}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -

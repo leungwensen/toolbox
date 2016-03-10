@@ -12,6 +12,7 @@ pathdirs=(
     $HOME/perl5/lib
     $HOME/.cabal/bin
     $HOME/scripts
+    $HOME/sofa
     $LOCAL/bin
     $LOCAL/sbin
     $M2
