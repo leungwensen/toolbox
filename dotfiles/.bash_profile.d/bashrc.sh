@@ -1,4 +1,3 @@
-
 export EDITOR=vim
 export NVM_DIR=$HOME/.nvm
 
@@ -6,6 +5,7 @@ LOCAL=/usr/local
 pathdirs=(
     $HOME/perl5/lib
     $HOME/scripts
+    $HOME/sofa
     $LOCAL/bin
     $LOCAL/sbin
 )
@@ -28,4 +28,3 @@ for src in ${sources[@]}; do
         echo $src not found
     fi
 done
-

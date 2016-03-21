@@ -17,6 +17,7 @@
 .config
 .dat*
 .grunt
+.gitconfig
 .last_cover_stats
 .lock-wscript
 .repl_history
