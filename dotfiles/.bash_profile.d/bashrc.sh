@@ -1,20 +1,13 @@
 
 export EDITOR=vim
-#export NODE_PATH=/usr/local/lib/node_modules:/Users/liangwensen/.nvm/versions/io.js/v2.0.1/lib/node_modules
-#export NODE_PATH=$NODE_PATH:/Users/liangwensen/.nvm/versions/node/v0.12.2/lib/node_modules
-#export NVM_DIR=$HOME/.nvm
-# export SHELL=bash
+export NVM_DIR=$HOME/.nvm
 
 LOCAL=/usr/local
 pathdirs=(
-    $CLOUDENGINE_PATH
-    $GOROOT/bin
     $HOME/perl5/lib
-    $HOME/.cabal/bin
     $HOME/scripts
     $LOCAL/bin
     $LOCAL/sbin
-    $M2
 )
 for dir in ${pathdirs[@]}; do
     if [ -d $dir ]; then
@@ -24,6 +17,7 @@ for dir in ${pathdirs[@]}; do
 done
 
 sources=(
+    $NVM_DIR/nvm.sh
     $HOME/perl5/perlbrew/etc/bashrc
 )
 for src in ${sources[@]}; do
@@ -34,6 +28,4 @@ for src in ${sources[@]}; do
         echo $src not found
     fi
 done
-
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 

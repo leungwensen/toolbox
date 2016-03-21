@@ -37,7 +37,7 @@ Bundle 'gorodinskiy/vim-coloresque'
 " Syntastic {
     Bundle 'Syntastic'
     let g:syntastic_javascript_checkers = [
-      \ 'jshint'
+      \ 'eslint'
       \ ]
 " }
 
