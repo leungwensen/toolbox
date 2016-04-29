@@ -1,5 +1,7 @@
 export EDITOR=vim
 export NVM_DIR=$HOME/.nvm
+export MAVEN_HOME=$HOME/mvn/apache-maven-3.2.2
+#export CLOUDENGINE_HOME=$HOME/cloudengine/cloudengine-4.1.4.0
 
 LOCAL=/usr/local
 pathdirs=(
@@ -8,6 +10,7 @@ pathdirs=(
     $HOME/sofa
     $LOCAL/bin
     $LOCAL/sbin
+    $MAVEN_HOME/bin
 )
 for dir in ${pathdirs[@]}; do
     if [ -d $dir ]; then
