@@ -31,3 +31,5 @@ for src in ${sources[@]}; do
         echo $src not found
     fi
 done
+
+eval $(thefuck --alias)
