@@ -1,0 +1,77 @@
+#!/bin/bash
+
+services=$(networksetup -listnetworkserviceorder | grep 'Hardware Port')
+
+while read line; do
+    sname=$(echo $line | awk -F  "(, )|(: )|[)]" '{print $2}')
+    sdev=$(echo $line | awk -F  "(, )|(: )|[)]" '{print $4}')
+    #echo "Current service: $sname, $sdev, $currentservice"
+    if [ -n "$sdev" ]; then
+        ifconfig $sdev 2>/dev/null | grep 'status: active' > /dev/null 2>&1
+        rc="$?"
+        if [ "$rc" -eq 0 ]; then
+            currentservice="$sname"
+        fi
+    fi
+done <<< "$(echo "$services")"
+
+if [ -n $currentservice ]; then
+    echo $currentservice is active
+
+    networksetup -setproxybypassdomains $currentservice \
+        *.115.com \
+        *.360.cn \
+        *.360.com \
+        *.alibaba-inc.com \
+        *.alibaba.com \
+        *.alibaba.net \
+        *.alibabacorp.com \
+        *.alicdn.com \
+        *.aliexpress.com \
+        *.alipay-corp.com \
+        *.alipay-inc.com \
+        *.alipay.com \
+        *.alipay.net \
+        *.alipayobjects.com \
+        *.aliway.com \
+        *.aliyun-inc.com \
+        *.aliyuncs.com \
+        *.alizoo.com \
+        *.amap.com \
+        *.antfinancial-corp.com \
+        *.antsdaq-corp.com \
+        *.atatech.org \
+        *.baidu.com \
+        *.dingtalk.com \
+        *.javbus3.com \
+        *.koubei-corp.com \
+        *.mayibank.net \
+        *.mybank-corp.cn \
+        *.qq.com \
+        *.taobao.com \
+        *.taobao.net \
+        *.taobao.org \
+        *.tbcdn.cn \
+        *.tbsite.net \
+        *.tmall.net \
+        *.weiyun.com \
+        *.yldt*.com \
+        *.yuleditu.com \
+        *.yunos-inc.com \
+        *.zmxy-corp.com.cn \
+        *alipayobjects.com \
+        10.*.*.* \
+        112.91.94.240 \
+        127.0.0.1 \
+        30.*.*.* \
+        liangwensens-macbook-pro.local \
+        localhost \
+        zfinder.in
+
+    echo bypass domains for $currentservice is set
+
+else
+    >&2 echo "Could not find current service"
+    exit 1
+fi
+
