@@ -16,6 +16,14 @@
     pager  = less -R
     excludesfile = ~/.gitignore
     quotepath = false
+	compression = 0
+	packedGitLimit = 512m
+	packedGitWindowSize = 512m
+
+[pack]
+	deltacachesize = 2047m
+	packSizeLimit = 2047m
+	windowMemory = 2047m
 
 [alias]
     diverges = !bash -c 'diff -u <(git rev-list --first-parent "${1}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -

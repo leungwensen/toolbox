@@ -8,3 +8,4 @@ done
 
 echo 'bash profile loaded'
 
+export PATH="/Users/liangwensen/qcloud:$PATH"

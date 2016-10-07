@@ -37,3 +37,4 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 export PATH="$HOME/Desktop/platform-tools/:$PATH"
+eval $(thefuck --alias)
