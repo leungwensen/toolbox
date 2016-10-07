@@ -31,3 +31,9 @@ for src in ${sources[@]}; do
         echo $src not found
     fi
 done
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+export PATH="$HOME/Desktop/platform-tools/:$PATH"
