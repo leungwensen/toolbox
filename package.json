@@ -1,0 +1,35 @@
+{
+  "name": "toolbox",
+  "version": "0.0.1",
+  "description": "toolbox of leungwensen",
+  "main": "index.js",
+  "scripts": {
+    "build-doc": "zfinder build",
+    "publish-all": "npm run push-all && npm publish && npm run sync-cnpm",
+    "push-all": "npm run push-master && npm run push-tags && npm run push-gh-pages",
+    "push-gh-pages": "git checkout gh-pages && git merge master && git push && git checkout master",
+    "push-master": "git checkout master && git push",
+    "push-tags": "git push --tag",
+    "start": "zfinder serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leungwensen/toolbox.git"
+  },
+  "keywords": [
+    "toolbox"
+  ],
+  "author": "leungwensen@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leungwensen/toolbox/issues"
+  },
+  "homepage": "https://github.com/leungwensen/toolbox#readme",
+  "dependencies": {
+    "zero-lang": "^0.1.3"
+  },
+  "devDependencies": {
+    "zfinder": "^0.2.9"
+  }
+}

@@ -1,15 +1,14 @@
 #!/bin/bash
 
-# todo: wrap wget to download an whole website
+echo -e "input the url you want to download"
+read PAGE
 
-#wget \
-     #--recursive \
-     #--no-clobber \
-     #--page-requisites \
-     #--html-extension \
-     #--convert-links \
-     #--restrict-file-names=windows \
-     #--domains website.org \
-     #--no-parent \
-         #www.website.org/tutorials/html/
-
+wget \
+     --recursive \
+     --no-clobber \
+     --page-requisites \
+     --html-extension \
+     --convert-links \
+     --restrict-file-names=windows \
+     --no-parent \
+         $PAGE

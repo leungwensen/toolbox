@@ -1,4 +1,0 @@
-#!/bin/bash
-
-open -a /Applications/eclipse/Eclipse.app
-

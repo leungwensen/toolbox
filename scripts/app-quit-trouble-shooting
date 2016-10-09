@@ -1,2 +1,0 @@
-cd /Applications
-sudo update_dyld_shared_cache -force -debug
