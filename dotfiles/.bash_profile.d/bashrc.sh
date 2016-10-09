@@ -1,24 +1,22 @@
-export EDITOR=vim
-export NVM_DIR=$HOME/.nvm
-export MAVEN_HOME=$HOME/mvn/apache-maven-3.2.2
-#export CLOUDENGINE_HOME=$HOME/cloudengine/cloudengine-4.1.4.0
+#!/usr/bin/env bash
 
+# paths
 LOCAL=/usr/local
-pathdirs=(
+PATH_DIRS=(
     $HOME/perl5/lib
     $HOME/scripts
-    $HOME/sofa
     $LOCAL/bin
     $LOCAL/sbin
-    $MAVEN_HOME/bin
 )
-for dir in ${pathdirs[@]}; do
+for dir in ${PATH_DIRS[@]}; do
     if [ -d $dir ]; then
         # echo $dir
         PATH=$PATH:$dir
     fi
 done
 
+export EDITOR=vim
+export NVM_DIR="$HOME/.nvm"
 sources=(
     $NVM_DIR/nvm.sh
     $HOME/perl5/perlbrew/etc/bashrc

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 # git
 alias ga="git add -A"

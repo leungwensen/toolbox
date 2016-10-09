@@ -1,4 +1,3 @@
-
 for src in $HOME/.bash_profile.d/*; do
     if [ -s $src ]; then
         # echo $src
@@ -7,5 +6,3 @@ for src in $HOME/.bash_profile.d/*; do
 done
 
 echo 'bash profile loaded'
-
-export PATH="/Users/liangwensen/qcloud:$PATH"

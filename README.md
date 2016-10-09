@@ -3,7 +3,8 @@ toolbox
 
 dotfiles, scripts, etc.
 
-## setup the development environment
+## setup environment
 
-    `curl -L https://raw.githubusercontent.com/leungwensen/toolbox/master/bin/setup.sh | bash`
-
+```shell
+curl -L https://raw.githubusercontent.com/leungwensen/toolbox/master/bin/setup | bash
+```
