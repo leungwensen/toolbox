@@ -43,6 +43,7 @@ if [ -n $currentservice ]; then
         *.antsdaq-corp.com \
         *.atatech.org \
         *.baidu.com \
+        *.baiducontent.com \
         *.dingtalk.com \
         *.javbus3.com \
         *.jd.com \
