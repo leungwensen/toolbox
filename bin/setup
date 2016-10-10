@@ -17,6 +17,7 @@ apps=(
     git
     svn
     the_silver_searcher
+    thefuck
     vim
 )
 brew update
