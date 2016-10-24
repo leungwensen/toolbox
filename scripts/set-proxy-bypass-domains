@@ -49,6 +49,7 @@ if [ -n $currentservice ]; then
         *baiducontent.com \
         *dingtalk.com \
         *gtimg.com \
+        *ituring.com.cn \
         *javbus3.com \
         *jd.com \
         *kaola.com \
