@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 PROCESS_PWD=$PWD
 
