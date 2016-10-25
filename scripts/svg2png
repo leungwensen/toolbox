@@ -1,0 +1,18 @@
+#!/bin/bash
+
+PROCESS_PWD=$PWD
+
+echo -e "specify the resolution(pixels)"
+read PIXELS
+
+for file in "$PROCESS_PWD"/*
+do
+    if [ -f "$file" ]; then
+        extname="${file##*.}"
+        if [ $extname == "svg" ]; then
+            echo "converting $file"
+            qlmanage -t -s $PIXELS -o $PROCESS_PWD $file
+            mv "$file.png" "${file%.svg}.png"
+        fi
+    fi
+done
