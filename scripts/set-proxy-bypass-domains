@@ -63,6 +63,7 @@ if [ -n $currentservice ]; then
         *tbcdn.cn \
         *tbsite.net \
         *tmall.net \
+        *weibo.com \
         *weiyun.com \
         *yldt*.com \
         *yuleditu.com \
