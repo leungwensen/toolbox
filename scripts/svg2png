@@ -11,7 +11,7 @@ do
         extname="${file##*.}"
         if [ $extname == "svg" ]; then
             echo "converting $file"
-            qlmanage -t -s $PIXELS -o $PROCESS_PWD $file
+            qlmanage -t -x -s $PIXELS -o $PROCESS_PWD $file
             mv "$file.png" "${file%.svg}.png"
         fi
     fi
