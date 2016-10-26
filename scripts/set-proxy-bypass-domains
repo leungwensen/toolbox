@@ -28,14 +28,12 @@ if [ -n $currentservice ]; then
         *alibaba.net \
         *alibabacorp.com \
         *alicdn.com \
-        *alidemo.cn \
         *alidemo.com \
         *aliexpress.com \
         *alipay-corp.com \
         *alipay-inc.com \
         *alipay.com \
         *alipay.net \
-        *alipayobjects.com \
         *alipayobjects.com \
         *aliway.com \
         *aliyun-inc.com \
@@ -54,6 +52,7 @@ if [ -n $currentservice ]; then
         *jd.com \
         *kaola.com \
         *koubei-corp.com \
+        *lianjia.com \
         *mayibank.net \
         *mybank-corp.cn \
         *qq.com \
