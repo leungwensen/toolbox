@@ -47,10 +47,12 @@ if [ -n $currentservice ]; then
         *atatech.org \
         *baidu.com \
         *baiducontent.com \
+        *bilibili.com \
         *dingtalk.com \
         *gtimg.com \
         *javbus3.com \
         *jd.com \
+        *acgvideo.com \
         *kaola.com \
         *koubei-corp.com \
         *mayibank.net \
