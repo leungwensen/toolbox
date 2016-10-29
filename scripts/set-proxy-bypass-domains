@@ -28,14 +28,12 @@ if [ -n $currentservice ]; then
         *alibaba.net \
         *alibabacorp.com \
         *alicdn.com \
-        *alidemo.cn \
         *alidemo.com \
         *aliexpress.com \
         *alipay-corp.com \
         *alipay-inc.com \
         *alipay.com \
         *alipay.net \
-        *alipayobjects.com \
         *alipayobjects.com \
         *aliway.com \
         *aliyun-inc.com \
@@ -50,11 +48,13 @@ if [ -n $currentservice ]; then
         *bilibili.com \
         *dingtalk.com \
         *gtimg.com \
+        *ituring.com.cn \
         *javbus3.com \
         *jd.com \
         *acgvideo.com \
         *kaola.com \
         *koubei-corp.com \
+        *lianjia.com \
         *mayibank.net \
         *mybank-corp.cn \
         *qq.com \
@@ -64,6 +64,7 @@ if [ -n $currentservice ]; then
         *tbcdn.cn \
         *tbsite.net \
         *tmall.net \
+        *weibo.com \
         *weiyun.com \
         *yldt*.com \
         *yuleditu.com \
