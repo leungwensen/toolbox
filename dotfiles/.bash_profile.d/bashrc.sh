@@ -16,7 +16,7 @@ done
 export EDITOR=vim
 export JAVA_HOME=$(/usr/libexec/java_home)
 export NVM_DIR="$HOME/.nvm"
-export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+export NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 
 sources=(
     $NVM_DIR/nvm.sh

@@ -20,6 +20,10 @@ for app in ${apps[@]}; do
     brew install $app && brew upgrade $app
 done
 
+# vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+
 # nodejs ###############################################################################################################
 # nvm
 if ! hash nvm 2>/dev/null; then
@@ -33,7 +37,7 @@ else
 fi
 # node
 if ! hash node 2>/dev/null; then
-    NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install node
+    NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install node
     nvm use node
 else
     echo 'node founded';
@@ -47,13 +51,13 @@ global_node_modules=(
     jshint
     less
     module-path
-    tnpm
     uglify-js
     zfinder
 )
 for node_module in ${global_node_modules[@]}; do
     npm install -g $node_module --registry=https://registry.npm.taobao.org
 done
+npm install -g tnpm --registry=http://registry.npm.alibaba-inc.com
 
 # perl #################################################################################################################
 # PERL_VERSION=perl-5.16.0
