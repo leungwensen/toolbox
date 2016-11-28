@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# paths
 LOCAL=/usr/local
 PATH_DIRS=(
     $HOME/scripts
@@ -15,7 +14,10 @@ for dir in ${PATH_DIRS[@]}; do
 done
 
 export EDITOR=vim
+export JAVA_HOME=$(/usr/libexec/java_home)
 export NVM_DIR="$HOME/.nvm"
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+
 sources=(
     $NVM_DIR/nvm.sh
 )
@@ -27,11 +29,5 @@ for src in ${sources[@]}; do
         echo $src not found
     fi
 done
-
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
-
-export JAVA_HOME=$(/usr/libexec/java_home)
 
 eval $(thefuck --alias)

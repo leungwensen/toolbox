@@ -33,14 +33,13 @@ else
 fi
 # node
 if ! hash node 2>/dev/null; then
-    nvm install node
+    NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install node
     nvm use node
 else
     echo 'node founded';
 fi
 # global node modules
 global_node_modules=(
-    cleancss
     cnpm
     depv
     file-encoder
@@ -53,7 +52,7 @@ global_node_modules=(
     zfinder
 )
 for node_module in ${global_node_modules[@]}; do
-    npm install -g $node_module
+    npm install -g $node_module --registry=https://registry.npm.taobao.org
 done
 
 # perl #################################################################################################################
