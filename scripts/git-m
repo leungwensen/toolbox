@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 #----changed the git history author info---
 #---see http://baike.corp.taobao.com/index.php/Git-m --
 bldgrn='\e[1;32m' # Green

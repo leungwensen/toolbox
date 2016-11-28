@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo -e "input a file types: xx|xx|xx: \c"
 read INPUT_TYPES

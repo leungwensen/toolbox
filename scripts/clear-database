@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 # A shell script to delete / drop all tables from MySQL database.
 # Usage: ./script user password dbnane
 # Usage: ./script user password dbnane server-ip

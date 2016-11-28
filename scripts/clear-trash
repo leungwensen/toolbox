@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 sudo rm -Rrfv /Volumes/*/.Trashes;
 sudo rm -Rrfv ~/.Trash;

@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 # Written by Rishabh Mishra. Released to the public domain.
 # USAGE:
 # Run the following command:

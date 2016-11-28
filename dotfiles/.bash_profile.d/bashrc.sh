@@ -3,7 +3,6 @@
 # paths
 LOCAL=/usr/local
 PATH_DIRS=(
-    $HOME/perl5/lib
     $HOME/scripts
     $LOCAL/bin
     $LOCAL/sbin
@@ -19,7 +18,6 @@ export EDITOR=vim
 export NVM_DIR="$HOME/.nvm"
 sources=(
     $NVM_DIR/nvm.sh
-    $HOME/perl5/perlbrew/etc/bashrc
 )
 for src in ${sources[@]}; do
     if [ -s $src ]; then
@@ -34,5 +32,6 @@ done
 # export PATH="$PYENV_ROOT/bin:$PATH"
 # eval "$(pyenv init -)"
 
-export PATH="$HOME/Desktop/platform-tools/:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 eval $(thefuck --alias)

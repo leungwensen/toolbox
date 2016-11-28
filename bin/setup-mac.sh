@@ -8,14 +8,8 @@ else
 fi
 
 # apps #################################################################################################################
-    # go
-    # mysql
-    # nginx
-    # pyenv
-    # tig
 apps=(
     git
-    svn
     the_silver_searcher
     thefuck
     vim
@@ -106,47 +100,15 @@ done
 # repos ################################################################################################################
 # repo home
 USERNAME=leungwensen
-REPO_DIR=$HOME/repo
+REPO_DIR=$HOME/repos
 mkdir $REPO_DIR
 # github
-GITHUB_HTTPS=https://github.com/
 GITHUB_SSH=git@github.com:
-GITHUB_PUBLIC_REPOS=(
-    altercation/ethanschoonover.com
-)
-for repo in ${GITHUB_HTTPS[@]}; do
-    if [ -e $REPO_DIR/$repo ]; then
-        cd $REPO_DIR/$repo
-        echo "update $repo"
-        git pull
-    else
-        cd $REPO_DIR
-        echo "clone $repo"
-        git clone $GITHUB_HTTPS$repo.git $repo
-    fi
-done
 GITHUB_PERSONAL_REPOS=(
-    amd-module
-    blog
-    depv
-    file-encoder
-    lab
-    node-module-path
-    svg-icon
-    template2module
     toolbox
-    try2get
-    wiser-javascript
-    xmind-sdk-javascript
-    xml-lite
-    zero-colors
-    zero-declare
-    zero-lang
-    zero-locale
-    zfinder
 )
 for repo in ${GITHUB_SSH[@]}; do
-    REPO_NAME=$USERNAME/$repo
+    REPO_NAME=$repo
     if [ -e $REPO_DIR/$REPO_NAME ]; then
         cd $REPO_DIR/$REPO_NAME
         echo "update $REPO_NAME"
@@ -154,7 +116,7 @@ for repo in ${GITHUB_SSH[@]}; do
     else
         cd $REPO_DIR
         echo "clone $REPO_NAME"
-        git clone $GITHUB_SSH$REPO_NAME.git $REPO_NAME
+        git clone $GITHUB_SSH$USERNAME/$REPO_NAME.git $REPO_NAME
     fi
 done
 # gitlab
@@ -163,7 +125,7 @@ GITLAB_PERSONAL_REPOS=(
     doc
 )
 for repo in ${GITLAB_PERSONAL_REPOS[@]}; do
-    REPO_NAME=$USERNAME/$repo
+    REPO_NAME=$repo
     if [ -e $REPO_DIR/$REPO_NAME ]; then
         cd $REPO_DIR/$REPO_NAME
         echo "update $REPO_NAME"
@@ -171,7 +133,7 @@ for repo in ${GITLAB_PERSONAL_REPOS[@]}; do
     else
         cd $REPO_DIR
         echo "clone $REPO_NAME"
-        git clone $GITLAB_PERSONAL_REPOS$REPO_NAME.git $REPO_NAME
+        git clone $GITLAB_PERSONAL_REPOS$USERNAME/$REPO_NAME.git $REPO_NAME
     fi
 done
 
@@ -179,21 +141,19 @@ done
 cd $HOME
 # self defined scripts
 rm scripts
-ln -s $HOME/repo/leungwensen/toolbox/scripts scripts # self defined scripts
+ln -s $REPO_DIR/toolbox/scripts scripts # self defined scripts
 # vimrc, bashrc & others
 links=(
     .bash_profile
     .bash_profile.d
     .gitconfig
     .gitignore
-    .tmux.conf
-    .vimperatorrc
     .vimrc
     .vimrc.d
 )
 for link in ${links[@]}; do
     rm $link
-    ln -s $HOME/repo/leungwensen/toolbox/dotfiles/$link $link
+    ln -s $REPO_DIR/toolbox/dotfiles/$link $link
 done
 # make the magic happen
 source $HOME/.bash_profile
