@@ -20,6 +20,9 @@ if [ -n $currentservice ]; then
 
     networksetup -setproxybypassdomains $currentservice \
         *115.com \
+        *126.com \
+        *126.net \
+        *163.com \
         *360.cn \
         *360.com \
         *360buyimg.com \
@@ -70,10 +73,11 @@ if [ -n $currentservice ]; then
         *yuleditu.com \
         *yunos-inc.com \
         *zmxy-corp.com.cn \
+        0.0.0.0 \
         10.*.*.* \
         112.91.94.240 \
         127.0.0.1 \
-        192.168.1.1 \
+        192.168.1.* \
         30.*.*.* \
         liangwensens-macbook-pro.local \
         localhost \
