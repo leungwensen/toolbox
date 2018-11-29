@@ -28,11 +28,9 @@ META.yml
 MYMETA.*
 coverage
 
-!Build
 /.bundle
 /.config
 /.yardoc
-/Build
 /InstalledFiles
 /_yardoc
 /blib

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+git config user.name 'wensen.lws'
+git config user.email 'wensen.lws@alibaba-inc.com'
