@@ -8,56 +8,64 @@ else
 fi
 
 # apps #################################################################################################################
+echo 'updating brew'
+brew update
+echo 'brew is up to date'
 apps=(
     git
     the_silver_searcher
     thefuck
     vim
 )
-brew update
 for app in ${apps[@]}; do
     echo "install $app"
     brew install $app && brew upgrade $app
+    echo "$app installed"
 done
 
 # vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+VIM_VUNDLE_PATH=$HOME/.vim/bundle/Vundle.vim
+if [ -e $VIM_VUNDLE_PATH ]; then
+    cd $VIM_VUNDLE_PATH && git pull
+else
+    git clone https://github.com/VundleVim/Vundle.vim.git $VIM_VUNDLE_PATH
+fi
 
 
 # nodejs ###############################################################################################################
 # nvm
-if ! hash nvm 2>/dev/null; then
-    export NVM_DIR="$HOME/.nvm" && (
-        git clone https://github.com/creationix/nvm.git "$NVM_DIR"
-        cd "$NVM_DIR"
-        git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`
-    ) && . "$NVM_DIR/nvm.sh"
-else
-    echo 'nvm founded';
-fi
-# node
-if ! hash node 2>/dev/null; then
-    NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install node
-    nvm use node
-else
-    echo 'node founded';
-fi
-# global node modules
-global_node_modules=(
-    cnpm
-    depv
-    file-encoder
-    gulp
-    jshint
-    less
-    module-path
-    uglify-js
-    zfinder
-)
-for node_module in ${global_node_modules[@]}; do
-    npm install -g $node_module --registry=https://registry.npm.taobao.org
-done
-npm install -g tnpm --registry=http://registry.npm.alibaba-inc.com
+# if ! hash nvm 2>/dev/null; then
+#     export NVM_DIR="$HOME/.nvm" && (
+#         git clone https://github.com/creationix/nvm.git "$NVM_DIR"
+#         cd "$NVM_DIR"
+#         git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`
+#     ) && . "$NVM_DIR/nvm.sh"
+# else
+#     echo 'nvm founded';
+# fi
+# # node
+# if ! hash node 2>/dev/null; then
+#     NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install node
+#     nvm use node
+# else
+#     echo 'node founded';
+# fi
+# # global node modules
+# global_node_modules=(
+#     cnpm
+#     depv
+#     file-encoder
+#     gulp
+#     jshint
+#     less
+#     module-path
+#     uglify-js
+#     zfinder
+# )
+# for node_module in ${global_node_modules[@]}; do
+#     npm install -g $node_module --registry=https://registry.npm.taobao.org
+# done
+# npm install -g tnpm --registry=http://registry.npm.alibaba-inc.com
 
 # perl #################################################################################################################
 # PERL_VERSION=perl-5.16.0
@@ -103,14 +111,14 @@ npm install -g tnpm --registry=http://registry.npm.alibaba-inc.com
 # repos ################################################################################################################
 # repo home
 USERNAME=leungwensen
-REPO_DIR=$HOME/repos
+REPO_DIR=$HOME/repos/private
 mkdir $REPO_DIR
 # github
 GITHUB_SSH=git@github.com:
 GITHUB_PERSONAL_REPOS=(
     toolbox
 )
-for repo in ${GITHUB_SSH[@]}; do
+for repo in ${GITHUB_PERSONAL_REPOS[@]}; do
     REPO_NAME=$repo
     if [ -e $REPO_DIR/$REPO_NAME ]; then
         cd $REPO_DIR/$REPO_NAME
