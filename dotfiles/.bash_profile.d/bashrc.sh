@@ -2,6 +2,7 @@
 
 LOCAL=/usr/local
 PATH_DIRS=(
+    $HOME/.cli
     $HOME/scripts
     $LOCAL/bin
     $LOCAL/sbin
@@ -17,6 +18,7 @@ export EDITOR=vim
 export JAVA_HOME=$(/usr/libexec/java_home)
 export NVM_DIR="$HOME/.nvm"
 export NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
 sources=(
     $NVM_DIR/nvm.sh
