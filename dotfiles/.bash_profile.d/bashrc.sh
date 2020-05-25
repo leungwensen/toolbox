@@ -6,6 +6,7 @@ PATH_DIRS=(
     $HOME/scripts
     $LOCAL/bin
     $LOCAL/sbin
+    /Users/leungwensen/Library/Android/sdk/platform-tools/
 )
 for dir in ${PATH_DIRS[@]}; do
     if [ -d $dir ]; then
